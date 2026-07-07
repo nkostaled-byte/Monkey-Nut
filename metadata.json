@@ -1,0 +1,6 @@
+{
+  "name": "Monkey Nut",
+  "description": "Premium, playful, and responsive landing page for Monkey Nut children's peanut butter snack brand.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
