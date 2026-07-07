@@ -153,48 +153,51 @@ export default function Hero({ onShopNowClick, onViewProductsClick }: HeroProps)
           </div>
 
           {/* Right Side: Interactive overlap presentation (55% width on desktop) */}
-          <div className="w-full lg:w-[calc(55%-40px)] relative h-[420px] sm:h-[500px] md:h-[550px] lg:h-[680px] flex items-center justify-center lg:justify-end overflow-visible mt-12 lg:mt-0">
-            <div className="relative w-full h-full flex items-center justify-center lg:block">
+          <div className="w-full lg:w-[calc(55%-40px)] relative h-auto lg:h-[680px] flex flex-col lg:block items-center justify-center lg:justify-end overflow-visible mt-12 lg:mt-0">
+            <div className="relative w-full lg:h-full flex flex-col lg:block items-center justify-center gap-8">
               
-              {/* Product 1: Smooth Sachet */}
-              <div
-                id="hero-smooth-sachet"
-                ref={smoothRef}
-                className="absolute z-10 left-[8%] top-[2%] w-[68%] sm:w-[62%] lg:w-[520px] lg:top-[40px] lg:right-[130px] lg:left-auto origin-center select-none"
-                style={{
-                  filter: "drop-shadow(0 20px 30px rgba(31, 47, 111, 0.16))",
-                }}
-              >
-                <img
-                  src={smoothImg}
-                  alt="Monkey Nut Smooth Peanut Butter Sachet"
-                  className="w-full h-auto object-contain transform rotate-[8deg] hover:rotate-[10deg] transition-transform duration-500 rounded-2xl"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
+              {/* Products Row Wrapper on Mobile (stacked), block on Desktop */}
+              <div className="w-full flex flex-col lg:block items-center justify-center gap-6 sm:gap-8 max-w-md lg:max-w-none">
+                {/* Product 1: Smooth Sachet */}
+                <div
+                  id="hero-smooth-sachet"
+                  ref={smoothRef}
+                  className="relative lg:absolute z-10 w-[75%] sm:w-[60%] lg:w-[520px] lg:top-[40px] lg:right-[130px] lg:left-auto origin-center select-none"
+                  style={{
+                    filter: "drop-shadow(0 20px 30px rgba(31, 47, 111, 0.16))",
+                  }}
+                >
+                  <img
+                    src={smoothImg}
+                    alt="Monkey Nut Smooth Peanut Butter Sachet"
+                    className="w-full h-auto object-contain transform rotate-[8deg] hover:rotate-[10deg] transition-transform duration-500 rounded-2xl"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
 
-              {/* Product 2: Chocolate Sachet */}
-              <div
-                id="hero-chocolate-sachet"
-                ref={chocolateRef}
-                className="absolute z-15 left-[-2%] top-[34%] w-[72%] sm:w-[66%] lg:w-[560px] lg:top-[290px] lg:right-[170px] lg:left-auto origin-center select-none"
-                style={{
-                  filter: "drop-shadow(0 25px 35px rgba(31, 47, 111, 0.18))",
-                }}
-              >
-                <img
-                  src={chocolateImg}
-                  alt="Monkey Nut Chocolate Peanut Butter Sachet"
-                  className="w-full h-auto object-contain transform rotate-[-8deg] hover:rotate-[-6deg] transition-transform duration-500 rounded-2xl"
-                  referrerPolicy="no-referrer"
-                />
+                {/* Product 2: Chocolate Sachet */}
+                <div
+                  id="hero-chocolate-sachet"
+                  ref={chocolateRef}
+                  className="relative lg:absolute z-15 w-[80%] sm:w-[65%] lg:w-[560px] lg:top-[290px] lg:right-[170px] lg:left-auto origin-center select-none"
+                  style={{
+                    filter: "drop-shadow(0 25px 35px rgba(31, 47, 111, 0.18))",
+                  }}
+                >
+                  <img
+                    src={chocolateImg}
+                    alt="Monkey Nut Chocolate Peanut Butter Sachet"
+                    className="w-full h-auto object-contain transform rotate-[-8deg] hover:rotate-[-6deg] transition-transform duration-500 rounded-2xl"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
               </div>
 
               {/* Mascot: Monkey Mascot */}
               <div
                 id="hero-monkey-mascot"
                 ref={mascotRef}
-                className="absolute z-20 right-[-15%] sm:right-[-10%] md:right-[-8%] bottom-[-5%] h-[260px] sm:h-[340px] md:h-[390px] lg:h-[600px] lg:w-auto lg:top-[90px] lg:right-[-180px] lg:left-auto lg:bottom-auto origin-bottom select-none"
+                className="relative lg:absolute z-20 w-[60%] sm:w-[50%] max-w-[240px] lg:max-w-none h-auto lg:h-[600px] lg:w-auto lg:top-[90px] lg:right-[-180px] lg:left-auto lg:bottom-auto origin-bottom select-none mt-4 lg:mt-0"
                 style={{
                   filter: "drop-shadow(0 15px 20px rgba(0, 0, 0, 0.08))",
                 }}
@@ -202,7 +205,7 @@ export default function Hero({ onShopNowClick, onViewProductsClick }: HeroProps)
                 <img
                   src={mascotImg}
                   alt="Monkey Nut Mascot"
-                  className="h-full w-auto object-contain hover:scale-[1.02] transition-transform duration-500"
+                  className="w-full lg:h-full lg:w-auto h-auto object-contain hover:scale-[1.02] transition-transform duration-500"
                   referrerPolicy="no-referrer"
                 />
               </div>
